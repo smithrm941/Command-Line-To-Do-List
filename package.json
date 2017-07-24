@@ -1,0 +1,23 @@
+{
+  "name": "commandline_todolist",
+  "version": "1.0.0",
+  "description": "Examples of how to use the Command Line To-Do List:",
+  "main": "tasks.js",
+  "scripts": {
+    "test": "mocha -- ./tasks-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smithrm941/Command-Line-To-Do-List.git"
+  },
+  "author": "Rhonda Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smithrm941/Command-Line-To-Do-List/issues"
+  },
+  "homepage": "https://github.com/smithrm941/Command-Line-To-Do-List#readme",
+  "dependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2"
+  }
+}
