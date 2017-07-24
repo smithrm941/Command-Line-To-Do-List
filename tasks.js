@@ -1,6 +1,7 @@
 #! /usr/local/bin/node
  const add = require('./commands/add')
  const list = require('./commands/list')
+ const deleteTask = require('./commands/delete')
 
 const method = process.argv[2]
 
@@ -10,6 +11,9 @@ switch (method) {
     break;
   case 'list':
     list()
+    break;
+  case 'deleteTask':
+    deleteTask(process.argv[3])
     break;
   default:
 }
