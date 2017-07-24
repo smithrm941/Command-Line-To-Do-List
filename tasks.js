@@ -20,4 +20,6 @@ switch (method) {
   case 'complete':
     complete(process.argv[3])
     break;
+  default:
+    throw new Error('Unknown command')
 }
