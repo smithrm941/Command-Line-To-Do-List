@@ -11,6 +11,12 @@ function list() {
     for (var i = 0; i < taskArray.length; i++) {
       console.log(`${taskArray[i].id}  ${taskArray[i].name}`)
     }
+    console.log(`\n`)
+    if(parsedObject.taskId !== 1) {
+      console.log(`You have ${parsedObject.taskId} tasks`)
+    } else {
+      console.log(`You have 1 task`)
+    }
   })
 }
 
