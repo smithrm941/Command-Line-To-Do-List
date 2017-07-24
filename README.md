@@ -2,7 +2,7 @@
 
 Examples of how to use the Command Line To-Do List:
 
-### Add 
+### Add
 
 Add 'Buy Groceries' to the empty list by typing:
 
@@ -12,7 +12,8 @@ You should see:
 
 ```Created task 1```
 
-The next task will be task 2, and so on...
+The next task will be task 2, and so on. However, these numbers don't repeat, so
+if for instance, task 2 is deleted or completed, the next task added will still be task 3.
 
 ### List
 
@@ -56,9 +57,3 @@ Delete that task by typing:
 You should see:
 
 ```Deleted task 2: Buy propane and propane accessories```
-
-
-
-
-
-

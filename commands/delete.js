@@ -12,7 +12,6 @@ function deleteTask (taskId) {
       if (taskArray[i].id == searchTerm) {
           index = i;
           console.log('Deleted task ' + taskArray[i].id + ': ' + taskArray[i].name)
-          parsedObject.taskId--
           taskArray.splice(i, 1)
           break;
       }

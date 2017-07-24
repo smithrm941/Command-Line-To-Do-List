@@ -37,7 +37,7 @@ function addTask(task, taskFile) {
 
   fs.writeFile(TASKFILEPATH, JSON.stringify(parsed), (err) => {
     if (err) throw err
-    console.log('The file has been saved!')
+    console.log(`Created task ${task.id}`)
   });
 }
 
