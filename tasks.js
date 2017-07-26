@@ -6,19 +6,20 @@
  const complete = require('./commands/complete')
 
 const method = process.argv[2]
+const argument = process.argv[3]
 
 switch (method) {
   case 'add':
-    add(process.argv[3])
+    add(argument)
     break;
   case 'list':
     list()
     break;
   case 'deleteTask':
-    deleteTask(process.argv[3])
+    deleteTask(argument)
     break;
   case 'complete':
-    complete(process.argv[3])
+    complete(argument)
     break;
   default:
     throw new Error('Unknown command')

@@ -6,9 +6,9 @@ function deleteTask (taskId) {
   fs.readFile(TASKFILEPATH, 'utf8', (err, taskFileContents) => {
     const parsedObject = JSON.parse( taskFileContents )
     const taskArray = parsedObject.taskStorage
-    var searchTerm = taskId,
+    let searchTerm = taskId,
         index = -1;
-    for(var i = 0, len = taskArray.length; i < len; i++) {
+    for(let i = 0, len = taskArray.length; i < len; i++) {
       if (taskArray[i].id == searchTerm) {
           index = i;
           console.log('Deleted task ' + taskArray[i].id + ': ' + taskArray[i].name)

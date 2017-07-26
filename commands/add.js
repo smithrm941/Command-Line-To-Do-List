@@ -7,7 +7,7 @@ function add(name)  {
   const task = { name: name, complete: false }
 
   fs.readFile(TASKFILEPATH, 'utf8', (err, taskFile) => {
-    if(err == null) {
+    if(!err) {
         addTask(task, taskFile)
       } else if(err.code == 'ENOENT') {
         addIfEmpty(task)
@@ -15,15 +15,28 @@ function add(name)  {
   });
 }
 
+// function addIfEmpty(task) {
+//   const initTaskFileContent = JSON.stringify({taskId: 0, taskStorage: []})
+//
+//   fs.writeFile(TASKFILEPATH, initTaskFileContent, 'utf8', (err) => {
+//     if (err) throw err;
+//
+//     fs.readFile(TASKFILEPATH, 'utf8', (err, taskFileContents) => {
+//       addTask(task, taskFileContents)
+//     })
+//   });
+// }
+
 function addIfEmpty(task) {
-  const initTaskFileContent = JSON.stringify({taskId: 0, taskStorage: []})
+  task.id = 1
+  const initTaskFileContent = JSON.stringify({taskId: 1, taskStorage: [task]})
 
   fs.writeFile(TASKFILEPATH, initTaskFileContent, 'utf8', (err) => {
     if (err) throw err;
 
-    fs.readFile(TASKFILEPATH, 'utf8', (err, taskFileContents) => {
-      addTask(task, taskFileContents)
-    })
+    // fs.readFile(TASKFILEPATH, 'utf8', (err, taskFileContents) => {
+    //   addTask(task, taskFileContents)
+    // })
   });
 }
 

@@ -26,7 +26,7 @@ function listExists () {
     const incompleteTasks = [];
     console.log("ID Description")
     console.log("-- -----------")
-    for (var i = 0; i < taskArray.length; i++) {
+    for (let i = 0; i < taskArray.length; i++) {
       if(taskArray[i].complete === false){
         console.log(`${taskArray[i].id}  ${taskArray[i].name}`)
         incompleteTasks.push(taskArray[i])
