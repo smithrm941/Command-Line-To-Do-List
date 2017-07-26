@@ -12,7 +12,7 @@ function complete (taskId) {
       if (taskArray[i].id == searchTerm) {
           index = i;
           console.log('Completed task ' + taskArray[i].id + ': ' + taskArray[i].name)
-          taskArray.splice(i, 1)
+          taskArray[i].complete = true;
           break;
       }
     }
